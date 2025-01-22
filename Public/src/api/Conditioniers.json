@@ -1,0 +1,29 @@
+{
+    "category": "Conditioners",
+    "products": [
+        {
+            "id": 1,
+            "type": "conditioner",
+            "name": "ALAMA, REPAIR, structure restoring conditioner for damaged and fragile hair, 300 ml",
+            "price": 8.99,
+            "image": "/Public/assets/products/kondicionierius1.jpg",
+            "description": "For dry and damaged hair."
+        },
+        {
+            "id": 2,
+            "type": "conditioner",
+            "name": "CHI LUXURY, BLACK SEED OIL, moisture restoring conditioner, 739 ml",
+            "price": 25.99,
+            "image": "/Public/assets/products/kondicionierius2.jpg",
+            "description": "Provides smoothness."
+        },
+        {
+            "id": 3,
+            "type": "conditioner",
+            "name": "OLAPLEX, No.5 BOND MAINTENANCE, hair conditioner, 250 ml",
+            "price": 29.99,
+            "image": "/Public/assets/products/kondicionierius3.jpg",
+            "description": "Moisturizes hair."
+        }
+    ]
+}

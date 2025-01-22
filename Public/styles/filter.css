@@ -1,0 +1,22 @@
+/* Rūšiavimo ir filtravimo sekcija */
+#sorting-filtering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    padding: 10px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.sorting, .filtering {
+    display: flex;
+    align-items: center;
+}
+
+select {
+    margin-left: 8px;
+    padding: 5px;
+    font-size: 14px;
+}

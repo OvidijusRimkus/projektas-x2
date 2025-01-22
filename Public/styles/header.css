@@ -1,0 +1,192 @@
+/* Bendrieji stiliai */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header dizainas */
+#header {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffe6e6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.header-part {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: black;
+}
+nav ul li a:hover {
+    color: #b17f7f;
+}
+
+/* Dropdown meniu */
+.dropdown-menu {
+    position: absolute;
+    background-color: white;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none;
+    list-style: none;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 10px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f7e9e9;
+    color: #b17f7f;
+}
+
+/* Logotipas */
+#logo-container img {
+    max-height: 90px;
+}
+
+/* Paieškos laukelis */
+#search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-bar {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 250px;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: #b17f7f;
+}
+
+#search-form button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Krepšelio ikona */
+.cart {
+    position: relative;
+}
+
+#cart-icon {
+    max-height: 35px;
+}
+
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #e21717;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Krepšelio šoninė panelė */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-header {
+    background-color: #b17f7f;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h2 {
+    font-size: 20px;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-items {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.cart-summary {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+#checkout-btn {
+    background-color: #b17f7f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#checkout-btn:hover {
+    background-color: #a16767;
+}

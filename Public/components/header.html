@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/Public/styles/header.css">
+<header id="header">
+    <nav>
+        <ul>
+            <li><a href="/Public/index.html">Home</a></li>
+            <li class="dropdown" id="products-dropdown">
+                <a href="#" id="products-link" aria-haspopup="true" aria-expanded="false">Products</a>
+                <ul class="dropdown-menu" aria-label="Product Categories">
+                    <!-- Categories will be loaded dynamically -->
+                </ul>
+            </li>
+            <li><a href="/Public/pages/Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <a href="index.html" id="logo-container" aria-label="Return to homepage">
+        <img src="/Public/assets/images/logo.png" alt="Ovify logo" id="logo">
+    </a>
+    <div class="header-part">
+    <form id="search-form" role="search" aria-label="Search through products">
+        <label for="search-bar" class="visually-hidden"></label>
+        <input
+            type="text"
+            id="search-bar"
+            placeholder="Search among 1000 products"
+            autocomplete="off"
+        >
+        <button type="submit" aria-label="Search">🔍</button>
+    </form>
+    <div class="cart">
+        <div id="open-cart" role="button" aria-label="View cart">
+            <img id="cart-icon" src="/Public/assets/images/cart-icon.png" alt="Cart">
+            <span id="cart-count" aria-live="polite">0</span>
+        </div>
+    </div>
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Cart</h2>
+            <button id="close-cart" class="close-cart" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-items" aria-live="polite">
+            <!-- Products will be dynamically loaded via JavaScript -->
+        </div>
+        <div class="cart-summary">
+            <p>Total: <span id="total-price">0.00 €</span></p>
+            <a href="/Public/pages/checkout.html">
+                <button id="checkout-btn">Checkout</button>
+            </a>
+        </div>
+    </div>
+</div>
+    <script src="/Public/scripts/cart.js" defer></script>
+    <script src="/Public/scripts/header.js" defer></script>
+</header>

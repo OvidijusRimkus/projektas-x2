@@ -1,0 +1,35 @@
+/* Navigacijos stiliai */
+#breadcrumb-navigation {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+}
+
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.breadcrumb li::after {
+    content: "/";
+    margin: 0 8px;
+    color: #6c757d;
+}
+
+.breadcrumb li:last-child::after {
+    content: "";
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OviFy - Elektroninė parduotuvė</title>
+    <link rel="stylesheet" href="/Public/styles/main.css">
+    <link rel="stylesheet" href="/Public/styles/header.css">
+    <link rel="stylesheet" href="/Public/styles/footer.css">
+    <link rel="stylesheet" href="/Public/styles/sidebar.css">
+    <link rel="stylesheet" href="/Public/styles/filter.css">
+    <link rel="stylesheet" href="/Public/styles/navigation.css">
+</head>
+<body>
+    <!-- Dinamiškai įkeliamas header -->
+    <div id="header-placeholder"></div>
+  <!-- Puslapio navigacija -->
+   <div class="breadcrumb-navigation">
+  <nav id="breadcrumb-navigation">
+    <ul class="breadcrumb">
+        <!-- Dinamiškai įterpiama navigacija -->
+    </div>
+         <!-- Rūšiavimas ir filtravimas -->
+        <section id="sorting-filtering">
+            <div class="sorting">
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by">
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="name-asc">Name: A-Z</option>
+                    <option value="name-desc">Name: Z-A</option>
+                </select>
+            </div>
+            <div class="filtering">
+                <label for="filter-by">Filter by:</label>
+                <select id="filter-by">
+                    <option value="all">All</option>
+                    <option value="shampoo">Šampūnai</option>
+                    <option value="conditioner">Kondicionieriai</option>
+                    <option value="hair-oil">Plaukų aliejai</option>
+                </select>
+            </div>
+        </section>
+    <div class="main-content">
+        <!-- Kategorijų šoninė juosta -->
+        <div id="sidebar-placeholder"></div>
+
+        <!-- Pagrindinis turinys -->
+        <main id="main-content">
+            <div id="cart-sidebar" class="cart-sidebar">
+                <div class="cart-header">
+                    <h2>Krepšelis</h2>
+                    <span id="close-cart" class="close-cart">&times;</span>
+                </div>
+                <div class="cart-items">
+                    <!-- Produktai bus dinamiškai įkelti -->
+                </div>
+                <div class="cart-summary">
+                    <p>Iš viso: <span id="total-price">0.00 €</span></p>
+                    <button id="checkout-btn">Apmokėti</button>
+                </div>
+            </div>
+
+            <h2>Welcome to OviFy</h2>
+            <p>Čia rasite geriausius pasiūlymus savo poreikiams!</p>
+
+            <section id="categories">
+                <h2>Mūsų produktai</h2>
+                <div class="category-grid">
+                    <!-- Kategorijos dinamiškai įterpiamos per JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <!-- Dinamiškai įkeliamas footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript failai -->
+    <script src="/Public/scripts/header.js"></script>
+    <script src="/Public/scripts/footer.js"></script>
+    <script src="/Public/scripts/sidebar.js"></script>
+    <script src="/Public/scripts/cart.js"></script>
+    <script src="/Public/scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+    "category": "Shampoos",
+    "products": [
+        {
+            "id": 1,
+            "type": "shampoo",
+            "name": "SYOSS, REPAIR, shampoo, 440 ml",
+            "price": 4.19,
+            "image": "/Public/assets/products/sampunas1.jpg",
+            "description": "For dry and damaged hair."
+        },
+        {
+            "id": 2,
+            "type": "shampoo",
+            "name": "HEAD & SHOULDERS, APPLE FRESH, shampoo, 400 ml",
+            "price": 6.69,
+            "image": "/Public/assets/products/sampunas2.jpg",
+            "description": "Against dandruff."
+        },
+        {
+            "id": 3,
+            "type": "shampoo",
+            "name": "GLISS, ULTIMATE REPAIR, shampoo, 250 ml",
+            "price": 3.39,
+            "image": "/Public/assets/products/sampunas3.jpg",
+            "description": "For dry and damaged hair."
+        },
+        {
+            "id": 4,
+            "type": "shampoo",
+            "name": "TIGI, BED HEAD FOR MEN, men's shampoo, 250 ml",
+            "price": 10.39,
+            "image": "/Public/assets/products/sampunas4.jpg",
+            "description": "For all hair types."
+        },
+        {
+            "id": 5,
+            "type": "shampoo",
+            "name": "HELEN SEWARD, SYNEBI, volumizing shampoo, 300 ml",
+            "price": 13.99,
+            "image": "/Public/assets/products/sampunas5.jpg",
+            "description": "For thin hair."
+        },
+        {
+            "id": 6,
+            "type": "shampoo",
+            "name": "TIGI, SERIAL BLONDE, shampoo with keratin and amino acid, 400 ml",
+            "price": 18.29,
+            "image": "/Public/assets/products/sampunas6.jpg",
+            "description": "For blonde hair."
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "for-hair": {
+        "id": "For-hair",
+        "name": "For Hair",
+        "url": "/Public/pages/for-hair/for-hair.html",
+        "products": [
+    {
+        "id": "Shampoos",
+        "name": "Shampoos",
+        "url": "/Public/pages/for-hair/Shampoos.html",
+        "dataFile": "/Public/src/api/Shampoos.json"
+    },
+    {
+        "id": "Conditioners",
+        "name": "Conditioners",
+        "url": "/Public/pages/for-hair/Conditioners.html",
+        "dataFile": "/Public/src/api/Conditioniers.json"
+    },
+    {
+        "id": "Masks",
+        "name": "Masks",
+        "url": "/Public/pages/for-hair/Masks.html",
+        "dataFile": "/Public/src/api/Masks.json"
+    },
+    {
+        "id": "Oils-and-Serums",
+        "name": "Oils and Serums",
+        "url": "/Public/pages/for-hair/Oils-and-Serums.html",
+        "dataFile": "/Public/src/api/Oils-and-Serums.json"
+    }
+    ]
+},
+    "For-face": {
+        "id": "For-face",
+        "name": "For Face",
+        "url": "/Public/pages/for-face/for-face.html",
+        "products":[
+    {
+        "id": "Cleaners",
+        "name": "Cleaners",
+        "url": "/Public/pages/for-face/cleaners.html",
+        "dataFile": "/Public/src/api/Cleaners.json"
+    },
+    {
+        "id": "Tonics",
+        "name": "Tonics",
+        "url": "/Public/pages/for-face/tonics.html",
+        "dataFile": "/Public/src/api/Tonics.json"
+    },
+    {
+        "id": "Creams",
+        "name": "Creams",
+        "url": "/Public/pages/for-face/creams.html",
+        "dataFile": "/Public/src/api/Creams.json"
+    }
+        ]
+    }
+}

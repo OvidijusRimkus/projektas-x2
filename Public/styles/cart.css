@@ -1,0 +1,45 @@
+/* Krepšelio šoninė juosta */
+#cart-sidebar {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: -350px;
+    height: 100%;
+    overflow-y: auto;
+    transition: right 0.3s;
+}
+
+#cart-sidebar.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.cart-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.close-cart {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-summary {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 15px;
+    text-align: right;
+}
