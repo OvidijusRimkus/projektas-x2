@@ -5,9 +5,11 @@
     align-items: center;
     gap: 20px;
     margin: 20px 0;
-    padding: 10px 0;
-    background-color: #ffffff;
+    padding: 15px 20px;
+    background-color: #f9f9f9;
     border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Švelnus šešėlis */
+    border-radius: 8px; /* Apvalūs kampai */
 }
 
 .sorting, .filtering {
@@ -15,8 +17,29 @@
     align-items: center;
 }
 
+label {
+    font-weight: bold;
+    color: #333;
+    margin-right: 8px;
+}
+
 select {
     margin-left: 8px;
-    padding: 5px;
+    padding: 8px 12px;
     font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Apvalūs kampai */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Švelnus šešėlis */
+    transition: all 0.3s ease; /* Sklandus perėjimas */
+}
+
+select:hover {
+    border-color: #888;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007bff; /* Akcento spalva */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Akcento šešėlis */
 }

@@ -16,11 +16,13 @@
     <!-- Dinamiškai įkeliamas header -->
     <div id="header-placeholder"></div>
   <!-- Puslapio navigacija -->
-   <div class="breadcrumb-navigation">
-  <nav id="breadcrumb-navigation">
-    <ul class="breadcrumb">
-        <!-- Dinamiškai įterpiama navigacija -->
-    </div>
+  <div class="breadcrumb-navigation" data-category="For-hair" data-page="Shampoos">
+    <nav id="breadcrumb-navigation">
+        <ul class="breadcrumb">
+            <!-- Dinamiškai įterpiama navigacija -->
+        </ul>
+    </nav>
+</div>
          <!-- Rūšiavimas ir filtravimas -->
         <section id="sorting-filtering">
             <div class="sorting">
@@ -47,7 +49,7 @@
         <div id="sidebar-placeholder"></div>
 
         <!-- Pagrindinis turinys -->
-        <main id="main-content">
+        <main id="main-content" data-page="dynamic" data-category="For-hair">
             <div id="cart-sidebar" class="cart-sidebar">
                 <div class="cart-header">
                     <h2>Krepšelis</h2>
@@ -63,12 +65,16 @@
             </div>
 
             <h2>Welcome to OviFy</h2>
-            <p>Čia rasite geriausius pasiūlymus savo poreikiams!</p>
+            <p class="intro">Čia rasite geriausius pasiūlymus savo poreikiams!</p>
+             <!-- Reklamos banerio vieta -->
+             <div id="banner-placeholder">
+                <!-- Reklamos banerio vieta -->
+            </div>
 
             <section id="categories">
                 <h2>Mūsų produktai</h2>
-                <div class="category-grid">
-                    <!-- Kategorijos dinamiškai įterpiamos per JavaScript -->
+                <div id="all-products">
+                    <!-- Produktai dinamiškai įterpiami per JavaScript -->
                 </div>
             </section>
         </main>
