@@ -41,7 +41,9 @@ async function loadCategories() {
 
             // Pridėti įvykį paspaudus subkategoriją
             subcategoryElement.addEventListener("click", () => {
-                window.location.href = subcategory.url;
+                // Pakeičiame URL į tinkamą puslapį
+                const subcategoryUrl = `/Public/pages/${category.id}/${subcategory.id}.html`;
+                window.location.href = subcategoryUrl;
             });
 
             subcategoryList.appendChild(subcategoryElement);

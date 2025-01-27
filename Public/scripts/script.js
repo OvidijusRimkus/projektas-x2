@@ -58,39 +58,4 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 
- // JSON produktų užkrovimo logika
- document.addEventListener('DOMContentLoaded', () => {
-    const allProductsContainer = document.getElementById('all-products');
-
-    const categories = [
-        '/Public/src/api/Shampoos.json',
-        '/Public/src/api/Conditioniers.json',
-        '/Public/src/api/Masks.json',
-        '/Public/src/api/Oils-and-Serums.json',
-        '/Public/src/api/Cleaners.json',
-        '/Public/src/api/Tonics.json',
-        '/Public/src/api/Creams.json'
-    ];
-
-    categories.forEach(category => {
-        fetch(category)
-            .then(response => response.json())
-            .then(data => {
-                data.products.forEach(product => {
-                    const productElement = document.createElement('div');
-                    productElement.classList.add('product-card');
-
-                    productElement.innerHTML = `
-                        <img src="${product.image}" alt="${product.name}">
-                        <h3>${product.name}</h3>
-                        <p>${product.description}</p>
-                        <p class="price">Price: €${product.price.toFixed(2)}</p>
-                        <button>Add to Cart</button>
-                    `;
-
-                    allProductsContainer.appendChild(productElement);
-                });
-            })
-            .catch(error => console.error('Error loading products:', error));
-    });
-});
+ 

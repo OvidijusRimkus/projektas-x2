@@ -27,13 +27,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const categoriesData = await response.json();
 
+        // Išvalome esamą meniu turinį, kad išvengtume dubliavimosi
+        productsDropdown.innerHTML = '';
+
         Object.values(categoriesData).forEach(category => {
             const categoryItem = document.createElement("li");
             categoryItem.classList.add("dropdown-category");
             categoryItem.innerHTML = `
-                <a href="${category.url}">${category.name}</a>
+                <a href="/Public/pages/products.html?category=${category.id}">${category.name}</a>
                 <ul class="subcategory-menu">
-                    ${category.products.map(sub => `<li><a href="${sub.url}">${sub.name}</a></li>`).join("")}
+                    ${category.products.map(sub => `<li><a href="/Public/pages/products.html?category=${category.id}&subcategory=${sub.id}">${sub.name}</a></li>`).join("")}
                 </ul>
             `;
 

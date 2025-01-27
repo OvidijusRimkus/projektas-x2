@@ -11,9 +11,9 @@
         "dataFile": "/Public/src/api/Shampoos.json"
     },
     {
-        "id": "Conditioners",
-        "name": "Conditioners",
-        "url": "/Public/pages/for-hair/Conditioners.html",
+        "id": "Conditioniers",
+        "name": "Conditioniers",
+        "url": "/Public/pages/for-hair/Conditioniers.html",
         "dataFile": "/Public/src/api/Conditioniers.json"
     },
     {
