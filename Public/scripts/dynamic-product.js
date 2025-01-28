@@ -5,46 +5,48 @@ document.addEventListener('DOMContentLoaded', async () => {
     const category = urlParams.get('category')?.toLowerCase();
     const subcategory = urlParams.get('subcategory')?.toLowerCase();
 
-    // Kategorijų ir subkategorijų struktūra
-    const categories = {
-        "for-hair": [
-            { name: 'shampoos', file: '/Public/src/api/Shampoos.json' },
-            { name: 'conditioniers', file: '/Public/src/api/Conditioniers.json' },
-            { name: 'masks', file: '/Public/src/api/Masks.json' },
-            { name: 'oils-and-serums', file: '/Public/src/api/Oils-and-Serums.json' }
-        ],
-        "for-face": [
-            { name: 'cleaners', file: '/Public/src/api/Cleaners.json' },
-            { name: 'tonics', file: '/Public/src/api/Tonics.json' },
-            { name: 'creams', file: '/Public/src/api/Creams.json' }
-        ]
-    };
+    // Funkcija kategorijoms užkrauti iš JSON failo
+    async function fetchCategories() {
+        try {
+            const response = await fetch('/Public/src/api/categories.json');
+            if (!response.ok) throw new Error('Nepavyko įkelti kategorijų.');
+            return await response.json();
+        } catch (error) {
+            console.error('Klaida įkeliant kategorijas:', error);
+            return null;
+        }
+    }
+
+    // Užkrauti kategorijas iš JSON failo
+    const categories = await fetchCategories();
+    if (!categories) return;
 
     // Užkrauti visus produktus, jei nėra kategorijos
     if (!category) {
         pageTitle.textContent = 'ALL PRODUCTS';
         // Užkrauti visus produktus iš visų kategorijų
-        for (const categoryFiles of Object.values(categories)) {
-            for (const { file } of categoryFiles) {
-                await loadProducts(file);
+        for (const categoryKey in categories) {
+            const categoryFiles = categories[categoryKey].products;
+            for (const { dataFile } of categoryFiles) {
+                await loadProducts(dataFile);
             }
         }
     } else {
         pageTitle.textContent = category.replace(/-/g, ' ').toUpperCase();
-        const categoryFiles = categories[category];
+        const categoryFiles = categories[category].products;
 
         if (subcategory) {
             // Užkrauti konkrečios subkategorijos produktus
-            const subcategoryFile = categoryFiles.find(item => item.name === subcategory);
+            const subcategoryFile = categoryFiles.find(item => item.id.toLowerCase() === subcategory);
             if (subcategoryFile) {
-                await loadProducts(subcategoryFile.file);
+                await loadProducts(subcategoryFile.dataFile);
             } else {
                 console.error('Subcategory not found.');
             }
         } else {
             // Užkrauti visas kategorijos subkategorijas
-            for (const { file } of categoryFiles) {
-                await loadProducts(file);
+            for (const { dataFile } of categoryFiles) {
+                await loadProducts(dataFile);
             }
         }
     }
