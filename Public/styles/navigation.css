@@ -1,35 +1,45 @@
-/* Navigacijos stiliai */
-#breadcrumb-navigation {
-    background-color: #ffffff;
-    padding: 10px 15px;
-    border-bottom: 1px solid #ddd;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 14px;
-}
-
 .breadcrumb {
-    list-style: none;
+    gap: 0px;
     display: flex;
-    gap: 8px;
+    list-style: none;
     padding: 0;
     margin: 0;
+    font-family: Arial, sans-serif; /* Elegantiškas šriftas */
+    font-size: 16px;
+    align-items: center; /* Vertikali elementų lygiuotė */
+}
+
+.breadcrumb li {
+    margin: 0 5px;
+    display: flex;
+    align-items: center; /* Vertikali elementų lygiuotė */
 }
 
 .breadcrumb li a {
     text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
+    color: #007BFF; /* Mėlyna nuorodų spalva */
+    font-weight: 500; /* Vidutinis šrifto svoris */
+    transition: color 0.3s ease; /* Spalvos keitimo efektas */
 }
 
-.breadcrumb li::after {
-    content: "/";
-    margin: 0 8px;
-    color: #6c757d;
+.breadcrumb li a:hover {
+    color: #0056b3; /* Tamsesnė mėlyna spalva užvedus pelę */
+}
+
+.breadcrumb li.breadcrumb-item::after {
+    display: inline-block;
+    content: "/"; /* Prideda „/“ tarp elementų */
+    margin-left: 5px;
+    margin-right: 5px; /* Daugiau erdvės aplink „/“ */
+    color: #666; /* Pilka spalva „/“ simboliui */
+    font-size: 14px; /* Mažesnis simbolis „/“ */
 }
 
 .breadcrumb li:last-child::after {
-    content: "";
+    content: ""; /* Paskutiniam elementui „/“ nerodomas */
+}
+
+.breadcrumb li:last-child a {
+    color: #333; /* Paskutinio elemento spalva (neaktyvi) */
+    cursor: default; /* Neaktyvi pelės žymeklio būsena */
 }
